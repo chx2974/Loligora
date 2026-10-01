@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="caron.case" format="2">
+  <advance width="460"/>
+  <outline>
+    <contour>
+      <point x="295.25438941370896" y="772.0" type="line"/>
+      <point x="489.4369231629657" y="886.8" type="line"/>
+      <point x="365.9369231629657" y="886.8" type="line"/>
+      <point x="308.0131559934431" y="852.5556818181818" type="line"/>
+      <point x="260.9369231629657" y="886.8" type="line"/>
+      <point x="137.43692316296568" y="886.8" type="line"/>
+    </contour>
+  </outline>
+</glyph>

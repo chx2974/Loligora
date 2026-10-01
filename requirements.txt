@@ -1,0 +1,6 @@
+fonttools[ufo,woff,unicode]>=4.53
+fontmake>=3.9
+ufoLib2>=0.16
+skia-pathops>=0.8
+brotli>=1.1
+uharfbuzz>=0.39

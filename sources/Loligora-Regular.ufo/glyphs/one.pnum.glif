@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="one.pnum" format="2">
+  <advance width="415"/>
+  <outline>
+    <contour>
+      <point x="337.0" y="0" type="line"/>
+      <point x="337.0" y="720" type="line"/>
+      <point x="253.0" y="720" type="line"/>
+      <point x="191.75" y="699.2"/>
+      <point x="127.0" y="648.5"/>
+      <point x="78.0" y="590" type="curve"/>
+      <point x="78.0" y="501.2" type="line"/>
+      <point x="127.0" y="559.7"/>
+      <point x="191.75" y="610.4000000000001"/>
+      <point x="253.0" y="631.2" type="curve"/>
+      <point x="253.0" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

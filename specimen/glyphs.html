@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loligora Glyphs</title>
+<link rel="stylesheet" href="glyphs.css">
+</head>
+<body>
+<main>
+  <p id="nofont" class="banner" hidden>Loligora did not load, so cells show a fallback font. Run <code>make serve</code> and open
+    <code>http://localhost:8000/specimen/glyphs.html</code>.</p>
+  <p id="nofile" class="banner" hidden>This page needs a web server to load <code>glyphs.json</code> and the fonts. Run <code>make serve</code> and open
+    <code>http://localhost:8000/specimen/glyphs.html</code>.</p>
+  <p id="noitalic" class="banner alt" hidden>Italic not built yet: italic cells show a synthetic slant.</p>
+  <h1>Loligora glyphs <span class="sub">all glyphs · <a href="index.html">back to specimen</a></span></h1>
+  <p class="note" id="summary">Loading glyph data...</p>
+
+  <div class="controls">
+    <label>Weight <input id="w" type="range" min="100" max="950" value="400"><input id="wn" type="number" min="100" max="950" step="1" value="400" inputmode="numeric" aria-label="Weight value"></label>
+    <label>Size <input id="s" type="range" min="24" max="160" value="64"><input id="sn" type="number" min="24" max="160" step="1" value="64" inputmode="numeric" aria-label="Size in pixels">px</label>
+    <label class="tog"><input id="it" type="checkbox"> Italic</label>
+    <label class="tog"><input id="lines" type="checkbox"> Metric lines</label>
+    <label class="tog"><input id="box" type="checkbox"> Advance box</label>
+    <input id="q" type="search" placeholder="Filter: char, name or U+0041" aria-label="Filter glyphs" spellcheck="false">
+  </div>
+
+  <div id="table"></div>
+</main>
+<div id="detail" class="overlay" hidden role="dialog" aria-modal="true" aria-label="Glyph detail">
+  <div class="panel">
+    <button id="close" aria-label="Close">&times;</button>
+    <div id="dbody"></div>
+  </div>
+</div>
+<script src="glyphs.js"></script>
+</body>
+</html>

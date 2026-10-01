@@ -1,0 +1,80 @@
+FONTLOG for Loligora
+===================
+
+This file provides detailed information on the Loligora font software. It
+should be distributed along with the fonts and any derivative works.
+
+Basic Font Information
+----------------------
+
+Loligora is a parametric variable sans-serif typeface, generated from Python
+code (fontmake + fontTools) rather than drawn by hand. It ships as two
+variable fonts, upright and italic, each with a weight axis (wght 100-950) and
+nine named instances: Thin 100, ExtraLight 200, Light 300, Regular 400,
+Medium 500, SemiBold 600, Bold 700, ExtraBold 800, Black 900 (the axis continues
+to 950 for an even heavier weight).
+The two fonts are linked by the STAT "ital" axis.
+
+Version: 1.000 (release v1.0.0).
+Designer: Charlie Champanhet
+Copyright: The Loligora Project Authors (see AUTHORS.txt)
+License: SIL Open Font License 1.1 (see OFL.txt). No Reserved Font Name.
+
+Name notice: a formal trademark check for "Loligora" is still needed before
+public release.
+
+Design Summary
+--------------
+
+A hybrid of neo-grotesque and superellipse sans. All round forms (o O 0 c C e
+G Q, bowls of a b d g p q, D P R B, 6 8 9) are true superellipses with visible
+flat sides, about halfway between near-ovals and squarish rounds. Everything
+else follows neo-grotesque conventions: fairly closed apertures, horizontal
+terminal cuts, low even stroke contrast, straight-legged R, spurred G, a tall
+x-height, and uniform, rational widths. The italic is an oblique of about 9
+degrees with curve correction: rounds are redrawn in slanted space instead of
+just sheared.
+
+Inter, Public Sans and Monda were consulted as inspiration and for comparison
+only. No outlines were copied from them or from any other font.
+
+Features
+--------
+
+- Tabular figures by default: digits are 580 units wide at every weight, in
+  upright and italic, and maths and currency symbols share that width so
+  columns of numbers align. Proportional figures (zero.pnum ... nine.pnum) are
+  available through the "pnum" feature; "tnum" restores the tabular defaults.
+- Kerning (kern): class-based and variable (interpolates across wght), with
+  separate italic values.
+- Mark positioning (mark, mkmk) from glyph anchors.
+- Case (case): capital-height spacing accents and combining marks.
+- Contextual alternates (calt): a combining mark after a capital switches to
+  its capital-height form.
+- Italic is a separate variable font (Loligora-Italic[wght]).
+
+Character Set
+-------------
+
+Western and Central European Latin: Basic Latin, Latin-1 Supplement,
+dotless i and j, Š š Ž ž Ÿ Œ œ ƒ, spacing modifiers (ˆ ˇ ˚ ˜), combining
+marks (grave, acute, circumflex, tilde, macron, dieresis, ring, caron,
+cedilla), figure space, en and em dashes, typographic quotes, dagger, double
+dagger, bullet, ellipsis, per mille, single guillemets, Euro, trademark and
+minus sign. Accented letters are built from components.
+
+ChangeLog
+---------
+
+1.000 - First release.
+
+Acknowledgements
+----------------
+
+If you make modifications, add your name (and other information) here, as
+described in the OFL.
+
+N: Charlie Champanhet
+E: (not listed)
+W: (not listed)
+D: Designer, programmer and maintainer of Loligora. Original design and code.

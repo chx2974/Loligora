@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="quotedbl" format="2">
+  <advance width="273"/>
+  <unicode hex="0022"/>
+  <outline>
+    <contour>
+      <point x="66.36" y="450" type="line"/>
+      <point x="83.64" y="450" type="line"/>
+      <point x="87.0" y="720" type="line"/>
+      <point x="63.0" y="720" type="line"/>
+    </contour>
+    <contour>
+      <point x="189.16000000000003" y="450" type="line"/>
+      <point x="206.44" y="450" type="line"/>
+      <point x="209.8" y="720" type="line"/>
+      <point x="185.8" y="720" type="line"/>
+    </contour>
+  </outline>
+</glyph>

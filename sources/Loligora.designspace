@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="100" maximum="950" default="400"/>
+  </axes>
+  <sources>
+    <source filename="Loligora-Thin.ufo" name="Thin" familyname="Loligora" stylename="Thin">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="Loligora-Regular.ufo" name="Regular" familyname="Loligora" stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="Loligora-ExtraBlack.ufo" name="ExtraBlack" familyname="Loligora" stylename="ExtraBlack">
+      <location>
+        <dimension name="Weight" xvalue="950"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance familyname="Loligora" stylename="Thin">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="ExtraLight">
+      <location>
+        <dimension name="Weight" xvalue="200"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Light">
+      <location>
+        <dimension name="Weight" xvalue="300"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Medium">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="SemiBold">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="ExtraBold">
+      <location>
+        <dimension name="Weight" xvalue="800"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+      </location>
+    </instance>
+  </instances>
+</designspace>

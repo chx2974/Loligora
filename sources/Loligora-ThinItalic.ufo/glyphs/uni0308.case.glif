@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0308.case" format="2">
+  <anchor x="57" y="720" name="_top"/>
+  <anchor x="63" y="778" name="top"/>
+  <outline>
+    <component base="dieresis.case" xOffset="-125.0"/>
+  </outline>
+</glyph>

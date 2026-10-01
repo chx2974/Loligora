@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name=".notdef" format="2">
+  <advance width="600"/>
+  <outline>
+    <contour>
+      <point x="18.978429955945103" y="0" type="line"/>
+      <point x="498.9784299559451" y="0" type="line"/>
+      <point x="613.0152269896112" y="720" type="line"/>
+      <point x="133.01522698961122" y="720" type="line"/>
+    </contour>
+    <contour>
+      <point x="35.469104568228985" y="13.2" type="line"/>
+      <point x="145.32455237732734" y="706.8" type="line"/>
+      <point x="596.5245523773274" y="706.8" type="line"/>
+      <point x="486.669104568229" y="13.2" type="line"/>
+    </contour>
+  </outline>
+</glyph>

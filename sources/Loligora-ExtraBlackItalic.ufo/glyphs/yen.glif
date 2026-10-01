@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="yen" format="2">
+  <advance width="580"/>
+  <unicode hex="00A5"/>
+  <outline>
+    <contour>
+      <point x="194.84493358052782" y="300" type="line"/>
+      <point x="366.14893358052785" y="300" type="line"/>
+      <point x="264.32239851683306" y="720" type="line"/>
+      <point x="93.01839851683306" y="720" type="line"/>
+    </contour>
+    <contour>
+      <point x="194.84493358052782" y="300" type="line"/>
+      <point x="366.14893358052785" y="300" type="line"/>
+      <point x="601.018398516833" y="720" type="line"/>
+      <point x="429.71439851683306" y="720" type="line"/>
+    </contour>
+    <contour>
+      <point x="139.88160148316695" y="0" type="line"/>
+      <point x="326.081601483167" y="0" type="line"/>
+      <point x="379.9323111935093" y="340" type="line"/>
+      <point x="193.73231119350928" y="340" type="line"/>
+    </contour>
+    <contour>
+      <point x="83.07464514482884" y="190" type="line"/>
+      <point x="443.0746451448288" y="190" type="line"/>
+      <point x="460.89289468133916" y="302.5" type="line"/>
+      <point x="100.89289468133916" y="302.5" type="line"/>
+    </contour>
+    <contour>
+      <point x="107.62423339513195" y="345" type="line"/>
+      <point x="467.62423339513197" y="345" type="line"/>
+      <point x="485.4424829316423" y="457.5" type="line"/>
+      <point x="125.44248293164229" y="457.5" type="line"/>
+    </contour>
+  </outline>
+</glyph>

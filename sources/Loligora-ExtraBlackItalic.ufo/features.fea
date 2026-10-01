@@ -1,0 +1,22 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+@UC = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AE OE Eth Thorn Oslash Lslash Hbar Germandbls Agrave Egrave Igrave Ograve Ugrave Wgrave Ygrave Aacute Eacute Iacute Oacute Uacute Yacute Cacute Lacute Nacute Racute Sacute Zacute Wacute Acircumflex Ecircumflex Icircumflex Ocircumflex Ucircumflex Wcircumflex Ycircumflex Atilde Ntilde Otilde Adieresis Edieresis Idieresis Odieresis Udieresis Wdieresis Ydieresis Aring Uring Ccedilla Scedilla Ccaron Dcaron Ecaron Ncaron Rcaron Scaron Tcaron Zcaron Amacron Emacron Imacron Umacron Abreve Gbreve Cdotaccent Edotaccent Gdotaccent Idotaccent Zdotaccent Aogonek Eogonek Iogonek Uogonek Ohungarumlaut Uhungarumlaut Gcommaaccent Kcommaaccent Lcommaaccent Ncommaaccent Scommaaccent Tcommaaccent Lcaron];
+@comb = [gravecomb acutecomb uni0302 tildecomb uni0308 uni0304 uni0327 uni030A uni030C uni0306 uni0307 uni0328 uni030B uni0326 uni0312];
+@comb_case = [gravecomb.case acutecomb.case uni0302.case tildecomb.case uni0308.case uni0304.case uni0327.case uni030A.case uni030C.case uni0306.case uni0307.case uni0328.case uni030B.case uni0326.case uni0312.case];
+@sp = [grave acute circumflex tilde dieresis macron cedilla ring caron breve dotaccent ogonek hungarumlaut commaaccent commaturn];
+@sp_case = [grave.case acute.case circumflex.case tilde.case dieresis.case macron.case cedilla.case ring.case caron.case breve.case dotaccent.case ogonek.case hungarumlaut.case commaaccent.case commaturn.case];
+feature calt {
+    sub [@UC @comb_case] @comb' by @comb_case;
+} calt;
+feature case {
+    sub @sp by @sp_case;
+    sub @comb by @comb_case;
+} case;
+@dg = [zero one two three four five six seven eight nine];
+@dg_pnum = [zero.pnum one.pnum two.pnum three.pnum four.pnum five.pnum six.pnum seven.pnum eight.pnum nine.pnum];
+feature pnum {
+    sub @dg by @dg_pnum;
+} pnum;
+feature tnum {
+    sub @dg_pnum by @dg;
+} tnum;

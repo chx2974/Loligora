@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="100" maximum="950" default="400"/>
+  </axes>
+  <sources>
+    <source filename="Loligora-ThinItalic.ufo" name="Thin Italic" familyname="Loligora" stylename="Thin Italic">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="Loligora-RegularItalic.ufo" name="Regular Italic" familyname="Loligora" stylename="Italic">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="Loligora-ExtraBlackItalic.ufo" name="ExtraBlack Italic" familyname="Loligora" stylename="ExtraBlack Italic">
+      <location>
+        <dimension name="Weight" xvalue="950"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance familyname="Loligora" stylename="Thin Italic">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="ExtraLight Italic">
+      <location>
+        <dimension name="Weight" xvalue="200"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Light Italic">
+      <location>
+        <dimension name="Weight" xvalue="300"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Italic">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Medium Italic">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="SemiBold Italic">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Bold Italic">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="ExtraBold Italic">
+      <location>
+        <dimension name="Weight" xvalue="800"/>
+      </location>
+    </instance>
+    <instance familyname="Loligora" stylename="Black Italic">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+      </location>
+    </instance>
+  </instances>
+</designspace>

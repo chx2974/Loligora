@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="caronalt" format="2">
+  <advance width="110"/>
+  <outline>
+    <contour>
+      <point x="-27.478219740445788" y="0" type="line"/>
+      <point x="7.521780259554214" y="0" type="line"/>
+      <point x="44.97821974044579" y="126" type="line"/>
+      <point x="-25.021780259554212" y="126" type="line"/>
+    </contour>
+  </outline>
+</glyph>

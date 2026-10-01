@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loligora Specimen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Monda:wght@400..700&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: "Loligora";
+    src: url("../fonts/variable/Loligora%5Bwght%5D.woff2") format("woff2"),
+         url("../fonts/variable/Loligora%5Bwght%5D.ttf") format("truetype");
+    font-weight: 100 950;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Loligora";
+    src: url("../fonts/variable/Loligora-Italic%5Bwght%5D.woff2") format("woff2"),
+         url("../fonts/variable/Loligora-Italic%5Bwght%5D.ttf") format("truetype");
+    font-weight: 100 950;
+    font-style: italic;
+    font-display: swap;
+  }
+  :root { --bg: #fbfaf7; --fg: #16161a; --muted: #6b6b75; --line: #e3e1da; --accent: #3b5bdb;
+          --w: 400; --size: 64px; --fs: normal; --ff: normal; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141417; --fg: #ececf0; --muted: #9a9aa6; --line: #2c2c33; --accent: #8ea6ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 15px/1.5 system-ui, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font: 700 20px/1.2 system-ui, sans-serif; margin: 0 0 4px; }
+  h2 { font: 600 13px/1.2 system-ui, sans-serif; text-transform: uppercase; letter-spacing: .08em;
+       color: var(--muted); margin: 40px 0 12px; border-top: 1px solid var(--line); padding-top: 16px; }
+  p.note { color: var(--muted); margin: 0 0 16px; max-width: 70ch; }
+  .controls { position: sticky; top: 0; background: var(--bg); padding: 12px 0; z-index: 1;
+              display: flex; flex-wrap: wrap; gap: 12px 24px; border-bottom: 1px solid var(--line); }
+  .controls label { display: flex; align-items: center; gap: 8px; }
+  .controls input[type=number] { width: 6ch; box-sizing: content-box; font: inherit; font-variant-numeric: tabular-nums;
+              color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 4px;
+              padding: 2px 4px; }
+  .controls input[type=number]:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .controls label.tog { cursor: pointer; }
+  .controls input[type=checkbox]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .live, .fixed, .col, #waterfall span, .cmp .sample, .free { font-style: var(--fs); font-feature-settings: var(--ff); }
+  .uv { display: grid; grid-template-columns: 56px 1fr 1fr; gap: 8px 12px; align-items: baseline;
+        padding: 6px 0; border-bottom: 1px solid var(--line); }
+  .uv .tag { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .uv .up, .uv .it { font-size: clamp(32px, 7vw, 64px); line-height: 1.15; overflow-wrap: anywhere; }
+  .uv .up { font-style: normal; } .uv .it { font-style: italic; }
+  @media (max-width: 600px) {
+    .uv { grid-template-columns: 1fr; gap: 0; }
+    .uv .tag { margin-bottom: 2px; }
+  }
+  .free { display: block; width: 100%; min-height: 3.5em; font: inherit; font-family: "Loligora", monospace;
+          font-weight: var(--w); font-size: var(--size); line-height: 1.15; font-style: var(--fs);
+          color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+          padding: 8px 10px; resize: vertical; overflow-wrap: anywhere; }
+  .free:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  #noitalic { background: var(--line); color: var(--fg); padding: 6px 12px; border-radius: 6px; }
+  .cl-font { font-family: "Loligora", monospace; }
+  .live { font-weight: var(--w); font-size: var(--size); line-height: 1.15;
+          overflow-wrap: anywhere; }
+  .row { display: grid; grid-template-columns: 56px 1fr; align-items: baseline; gap: 12px;
+         padding: 6px 0; border-bottom: 1px solid var(--line); }
+  .row .tag { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .fixed { font-size: clamp(32px, 7vw, 64px); line-height: 1.15; overflow-wrap: anywhere; }
+  .numbers { display: flex; flex-wrap: wrap; gap: 32px; }
+  .col { text-align: right; font-size: clamp(24px, 5vw, 40px); line-height: 1.25; }
+  .col .tag { display: block; font: 12px system-ui, sans-serif; color: var(--muted); }
+  .cmp .row { grid-template-columns: 110px 1fr; }
+  .cmptext { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 12px; color: var(--muted); }
+  .cmptext input { flex: 1 1 240px; min-width: 0; font: 16px/1.4 system-ui, sans-serif; color: var(--fg);
+                   background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; }
+  .cmptext input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .cmp .sample { font-size: clamp(28px, 6vw, 52px); font-weight: var(--w); line-height: 1.2;
+                 overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<main>
+  <p id="nofont" hidden style="background:#c92a2a;color:#fff;padding:8px 12px;border-radius:6px">
+    Loligora did not load, so its rows show a fallback font. Run <code>make serve</code> and open
+    <code>http://localhost:8000/specimen/</code>.</p>
+  <p id="noitalic" hidden>Italic not built yet: <code>Loligora-Italic[wght].woff2</code> did not load, so italic rows show a synthetic slant.</p>
+  <h1>Loligora <span style="font-weight:400;color:var(--muted)">v1.000 · variable wght 100–950 · upright + italic</span></h1>
+  <p class="note"><a href="glyphs.html">Glyph table: every glyph</a></p>
+  <p class="note">Latin character set: Western and Central European, GF Latin Core (see the glyph table for every glyph). Digits, maths and currency signs
+    are tabular by default (580 units at every weight).</p>
+
+  <div class="controls">
+    <label>Weight <input id="w" type="range" min="100" max="950" value="400"><input id="wn" type="number" min="100" max="950" step="1" value="400" inputmode="numeric" aria-label="Weight value"></label>
+    <label>Size <input id="s" type="range" min="12" max="200" value="64"><input id="sn" type="number" min="12" max="200" step="1" value="64" inputmode="numeric" aria-label="Size value in pixels">px</label>
+    <label class="tog"><input id="it" type="checkbox"> Italic</label>
+    <label class="tog"><input id="pn" type="checkbox"> Proportional digits (pnum)</label>
+  </div>
+
+  <h2>Live sample</h2>
+  <div class="cl-font live" contenteditable="true" spellcheck="false">Hello Hole leal nano one aloe Hen 1,234.50</div>
+
+  <h2>Weights 100 / 400 / 950</h2>
+  <div class="cl-font">
+    <div class="row"><span class="tag">100</span><span class="fixed" style="font-weight:100">Hello nano Hole 2024.50</span></div>
+    <div class="row"><span class="tag">400</span><span class="fixed" style="font-weight:400">Hello nano Hole 2024.50</span></div>
+    <div class="row"><span class="tag">950</span><span class="fixed" style="font-weight:950">Hello nano Hole 2024.50</span></div>
+  </div>
+
+  <h2>Upright vs italic</h2>
+  <p class="note">Same sample, upright left and italic right (independent of the Italic toggle).</p>
+  <div class="cl-font">
+    <div class="uv"><span class="tag">100</span><span class="up" style="font-weight:100">HOnol 01.10</span><span class="it" style="font-weight:100">HOnol 01.10</span></div>
+    <div class="uv"><span class="tag">400</span><span class="up" style="font-weight:400">HOnol 01.10</span><span class="it" style="font-weight:400">HOnol 01.10</span></div>
+    <div class="uv"><span class="tag">950</span><span class="up" style="font-weight:950">HOnol 01.10</span><span class="it" style="font-weight:950">HOnol 01.10</span></div>
+  </div>
+
+  <h2>Central European</h2>
+  <div class="cl-font">
+    <div class="row"><span class="tag">400</span><span class="fixed" style="font-weight:400">Łódź · Győr · Ștefan · Čeština · Lietuvių · STRAẞE ◌́</span></div>
+    <div class="row"><span class="tag">950</span><span class="fixed" style="font-weight:950">Łódź · Győr · Ștefan · Čeština · Lietuvių · STRAẞE ◌́</span></div>
+  </div>
+
+  <h2>Free text</h2>
+  <p class="note">Renders in Loligora at the current weight, size and style.
+    Characters outside the supported Latin set show in a fallback font.</p>
+  <textarea class="free" id="free" spellcheck="false" aria-label="Free text sample">HOnol 01 HOHnonol 1,010.10</textarea>
+
+  <h2>Tabular figures (right-aligned)</h2>
+  <div class="cl-font numbers" id="numbers"></div>
+
+  <h2>All weights</h2>
+  <div class="cl-font" id="waterfall"></div>
+
+  <h2>Comparison (uses the weight slider)</h2>
+  <p class="note">Monda only ships weights 400–700, so outside that range the browser clamps it.
+    Monda has no italic, so with the Italic toggle on it falls back to a synthetic slant.</p>
+  <label class="cmptext">Comparison text
+    <input id="cmpt" type="text" value="Hamburgefontsiv Kilo 1,234.50" spellcheck="false" aria-label="Comparison text"></label>
+  <div class="cmp" id="cmp"></div>
+</main>
+<script>
+  const root = document.documentElement;
+  const bind = (id, numId, prop, unit) => {
+    const el = document.getElementById(id), num = document.getElementById(numId);
+    const min = +el.min, max = +el.max;
+    let last = +el.value;
+    const apply = v => { last = v; el.value = v; root.style.setProperty(prop, v + unit); };
+    const parse = () => {               // valid integer within range, else null
+      if (num.value.trim() === "") return null;
+      const v = Number(num.value);
+      return Number.isFinite(v) && v >= min && v <= max ? v : null;
+    };
+    const commit = () => {              // clamp + round, or revert when empty/invalid
+      const raw = num.value.trim(), v = raw === "" ? NaN : Number(raw);
+      const out = Number.isFinite(v) ? Math.min(max, Math.max(min, Math.round(v))) : last;
+      num.value = out; apply(out);
+    };
+    el.addEventListener("input", () => { num.value = el.value; apply(+el.value); });
+    num.addEventListener("input", () => { const v = parse(); if (v !== null) apply(Math.round(v)); });
+    num.addEventListener("change", commit);
+    num.addEventListener("blur", commit);
+    num.addEventListener("keydown", e => {
+      if (e.key === "Enter") { commit(); return; }
+      if ((e.key === "ArrowUp" || e.key === "ArrowDown") && e.shiftKey) {
+        e.preventDefault();
+        const base = parse() ?? last, d = e.key === "ArrowUp" ? 10 : -10;
+        const v = Math.min(max, Math.max(min, Math.round(base) + d));
+        num.value = v; apply(v);
+      }
+    });
+    apply(last);
+  };
+  bind("w", "wn", "--w", "");
+  bind("s", "sn", "--size", "px");
+
+  const amounts = ["1,234.50", "98,765.00", "111.11", "7,080.96", "0.05", "42,069.18"];
+  document.getElementById("numbers").innerHTML = [100, 400, 950].map(w =>
+    `<div class="col" style="font-weight:${w}"><span class="tag">${w}</span>` +
+    amounts.map(a => `<div>${a}</div>`).join("") + `</div>`).join("");
+
+  document.getElementById("waterfall").innerHTML = [100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
+    .map(w => `<div class="row"><span class="tag">${w}</span>` +
+      `<span style="font-weight:${w};font-size:clamp(22px,4.5vw,36px)">Hello Hole leal nano 1,234.50</span></div>`)
+    .join("");
+
+  const fonts = [["Loligora", "'Loligora', monospace"], ["Inter", "'Inter', sans-serif"],
+                 ["Public Sans", "'Public Sans', sans-serif"], ["Monda", "'Monda', sans-serif"]];
+  document.getElementById("cmp").innerHTML = fonts.map(([n, f]) =>
+    `<div class="row"><span class="tag">${n}</span><span class="sample" style="font-family:${f}"></span></div>`)
+    .join("");
+  const cmpt = document.getElementById("cmpt");
+  try { const saved = localStorage.getItem("loligora.cmpText"); if (saved !== null) cmpt.value = saved; } catch (e) {}
+  const setCmp = () => {
+    document.querySelectorAll("#cmp .sample").forEach(el => { el.textContent = cmpt.value; });
+    try { localStorage.setItem("loligora.cmpText", cmpt.value); } catch (e) {}
+  };
+  cmpt.addEventListener("input", setCmp);
+  setCmp();
+  document.getElementById("it").addEventListener("change", e =>
+    root.style.setProperty("--fs", e.target.checked ? "italic" : "normal"));
+  document.getElementById("pn").addEventListener("change", e =>
+    root.style.setProperty("--ff", e.target.checked ? '"pnum"' : "normal"));
+  const ok = spec => document.fonts.load(spec).then(f => f.some(x => x.status === "loaded"), () => false);
+  Promise.all([ok('16px "Loligora"'), ok('italic 16px "Loligora"')]).then(([up, it]) => {
+    if (!up) document.getElementById("nofont").hidden = false;
+    else if (!it) document.getElementById("noitalic").hidden = false;
+  });
+</script>
+</body>
+</html>
